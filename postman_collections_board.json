@@ -1,0 +1,217 @@
+{
+  "info": {
+    "_postman_id": "a1f9e774-fc12-4f98-8c4c-123456789def",
+    "name": "Products & Reviews API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_access_token>",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test Product\",\n  \"description\": \"Some description\",\n  \"price\": 1500\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/product/create/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["product", "create"]
+        }
+      }
+    },
+    {
+      "name": "Get Product List",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/product/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["product"]
+        }
+      }
+    },
+    {
+      "name": "Get Product by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/product/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["product", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_access_token>",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Product\",\n  \"description\": \"Updated description\",\n  \"price\": 1800\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/product/update/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["product", "update", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_access_token>",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/product/delete/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["product", "delete", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create Review",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_access_token>",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": 1,\n  \"text\": \"Awesome product! Highly recommended.\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/review/create/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["review", "create"]
+        }
+      }
+    },
+    {
+      "name": "Get Review List",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/review/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["review"]
+        }
+      }
+    },
+    {
+      "name": "Get Review by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/review/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["review", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Review",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_access_token>",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": 1,\n  \"text\": \"Updated review text.\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/review/update/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["review", "update", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Review",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <your_access_token>",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/review/delete/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["review", "delete", "1"]
+        }
+      }
+    }
+  ]
+}
